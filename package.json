@@ -1,11 +1,17 @@
 {
-  "name": "lm-ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@class_liangmu/lm-ui",
+  "version": "0.1.2",
+  "private": false,
+  "main": "./lib/lm.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name lm-ui --dest lib packages/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liangmu123/lm-ui.git"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -14,6 +20,7 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@class_liangmu/lm-cli": "^1.0.7",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
