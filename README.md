@@ -1,24 +1,19 @@
-# lm-ui
-
-## Project setup
-```
-npm install
+## Install
+```shell
+npm install @class_liangmu/lm-ui -S
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Quick Start
+``` javascript
+import Vue from 'vue'
+import LMUI from '@class_liangmu/lm-ui'
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Vue.use(LMUI)
 
-### Lints and fixes files
+// or
+import {
+  Button
+  // ...
+} from 'LMUI'
+Vue.component(Button.name, Button)
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
