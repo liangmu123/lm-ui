@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import { validate_more_zero_decimal } from '../lib/utils/validator/number'
+console.log(validate_more_zero_decimal)
 export default {
   methods: {
     handleClick (row) {

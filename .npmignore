@@ -1,6 +1,8 @@
 # 忽略目录
 examples/
 public/
+build/
+lib/base
 
 # 忽略指定文件
 vue.config.js

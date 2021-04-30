@@ -1,6 +1,6 @@
 import Vue from "vue"
 import App from "./App.vue"
-import LmUi from '../packages'
+import LmUi from '../lib/index'
 
 Vue.config.productionTip = false
 
