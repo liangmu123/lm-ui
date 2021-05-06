@@ -14,6 +14,6 @@ Vue.use(LMUI)
 import {
   Button
   // ...
-} from 'LMUI'
+} from '@class_liangmu/lm-ui'
 Vue.component(Button.name, Button)
 ```

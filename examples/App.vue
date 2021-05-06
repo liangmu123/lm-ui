@@ -30,23 +30,42 @@
     <lm-button type="info" icon="ice-cream-round">点击</lm-button>
     <lm-button type="warning" icon="ice-cream-round">点击</lm-button>
     <br/>
-    <lm-button @click="handleClick(666)" type="warning" icon="ice-cream-round">事件按钮</lm-button>
+    <lm-button @click="handleClick" type="warning" icon="ice-cream-round">事件按钮</lm-button>
     <br />
     <lm-button disabled type="primary" icon="ice-cream-round">点击</lm-button>
     <lm-button disabled type="success" icon="ice-cream-round">点击</lm-button>
     <lm-button disabled type="danger" icon="ice-cream-round">点击</lm-button>
     <lm-button disabled type="info" icon="ice-cream-round">点击</lm-button>
     <lm-button disabled type="warning" icon="ice-cream-round">点击</lm-button>
+    <br>
+    <h2>测试v-click</h2>
+    <p>
+      <lm-button v-click:[{loadingOption}].debounce.loading="handleClick">click</lm-button>
+      <VClick />
+    </p>
   </div>
 </template>
 
 <script>
-import { validate_more_zero_decimal } from '../lib/utils/validator/number'
-console.log(validate_more_zero_decimal)
+
+import { validate_more_zero_decimal } from 'helpers/validator/number'
+import VClick from 'docs/helpers/v-click.md'
+
 export default {
+  components: {
+    VClick
+  },
+  data () {
+    return {
+      loadingOption: {
+        target: 'a'
+      }
+    }
+  },
   methods: {
-    handleClick (row) {
-      console.log(row)
+    handleClick (start, close) {
+      start('button')
+      close()
     }
   }
 }

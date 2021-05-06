@@ -4,13 +4,13 @@ exports.__esModule = true;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _debounce = require('./debounce');
+var _click = require('./click');
 
-var _debounce2 = _interopRequireDefault(_debounce);
+var _click2 = _interopRequireDefault(_click);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var directives = [_debounce2.default];
+var directives = [_click2.default];
 // 导出的对象
 var exportsObj = {};
 

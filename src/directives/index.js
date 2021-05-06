@@ -1,7 +1,7 @@
-import debounce from './debounce'
+import click from './click'
 
 const directives = [
-  debounce
+  click
 ]
 // 导出的对象
 const exportsObj = {}

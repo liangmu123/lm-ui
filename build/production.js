@@ -6,7 +6,7 @@ const componentEntries = getComponentEntries('./packages')
 
 module.exports = {
   configureWebpack: config => {
-    // config.mode = 'development'
+    config.mode = 'development'
     config.entry = {
       index: './src/index.js',
       base: './src/styles/base.scss',
@@ -28,6 +28,10 @@ module.exports = {
     }
   },
   chainWebpack: config => {
+
+    config.resolve.alias
+    .set('@', path.resolve(__dirname, '../src'))
+
     config.optimization.delete('splitChunks')
     config.plugins.delete('copy')
     config.plugins.delete('preload')
