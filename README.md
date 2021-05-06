@@ -1,3 +1,7 @@
+# @class_liangmu/lm-ui
+- 基于element-ui 封装的业务组件库
+- 支持按需加载
+
 ## Install
 ```shell
 npm install @class_liangmu/lm-ui -S
@@ -15,5 +19,6 @@ import {
   Button
   // ...
 } from '@class_liangmu/lm-ui'
-Vue.component(Button.name, Button)
+
+Vue.use(Button)
 ```

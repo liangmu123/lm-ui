@@ -1,6 +1,6 @@
 {
   "name": "@class_liangmu/lm-ui",
-  "version": "0.2.24",
+  "version": "0.2.25",
   "private": false,
   "main": "./lib/index/index.js",
   "scripts": {
