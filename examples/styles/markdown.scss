@@ -1,0 +1,11 @@
+.markdown {
+  pre {
+    margin: 1rem 0;
+    padding: 20px;
+    background: #e9ecef;
+    font-size: 18px;
+    .token.operator {
+      background: none;
+    }
+  }
+}

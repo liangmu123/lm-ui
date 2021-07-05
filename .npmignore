@@ -3,6 +3,8 @@ examples/
 public/
 build/
 lib/base
+tests/
+loaders/
 
 # 忽略指定文件
 vue.config.js

@@ -9,6 +9,20 @@ module.exports = {
     }
   },
   lintOnSave: false,
+  configureWebpack: config => {
+    config.module.rules.push({
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+          },
+          {
+            loader: path.resolve(__dirname, '../loaders/markdownLoader.js')
+          }
+        ]
+      }
+    )
+  },
   chainWebpack: config => {
 
     config.module
@@ -23,20 +37,11 @@ module.exports = {
         return options
       })
     
-    config.module
-      .rule('md')
-      .test(/\.md$/)
-      .use('vue-loader')
-      .loader('vue-loader')
-      .end()
-      .use('vue-markdown-loader')
-      .loader('vue-markdown-loader/lib/markdown-compiler')
-      .options({
-        raw: true
-      })
-    
     config.resolve.alias
     .set('@', path.resolve(__dirname, '../src'))
+
+    config.resolve.alias
+    .set('examples', path.resolve(__dirname, '../examples'))
 
     config.resolve.alias
     .set('docs', path.resolve(__dirname, '../docs'))
